@@ -93,11 +93,9 @@ SSH into the control node and follow the steps below:
 - Update the hosts file to include IP Address of Web-1, -2 and -3 which have DVWA.
 - Run the playbook, and navigate to 'sudo docker ps' to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?
-   The playbooks are filebeat-playbook.yml, metric-playbook.yml, install-elk.yml which you would copy to etc/ansible/files
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install
- the ELK server on versus which to install Filebeat on? You need to update the hosts file with the ip addresses in the ansible-confi> configuration file, create a seperate field for installing elk versus filebeat.
-_
-- _Which URL do you navigate to in order to check that the ELK server is running? Once installed, navigate to http://<elk.ip.address>
+ 
+ Which file is the playbook? Where do you copy it?
+   The playbooks are filebeat-playbook.yml, metric-playbook.yml, install-elk.yml which you would copy to etc/ansible/files_Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on? 
+   You need to update the hosts file with the ip addresses in the ansible-confi> configuration file, create a seperate field for installing elk versus filebeat.
+Which URL do you navigate to in order to check that the ELK server is running? Once installed, navigate to http://<elk.ip.address:5601/app/kibana>
 
