@@ -82,8 +82,6 @@ We have installed the following Beats on these machines:
 -Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see.
-E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 -Filebeat : Filebeat tracks changes to the filesystem. An example would be detecting changes to Apache Logs.
 -Metricbeat: Metricbeat collects metrics from the operating system. We can detect SSH login attempts, failed sudo escalations and CP>
 ### Using the Playbook
