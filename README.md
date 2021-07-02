@@ -79,7 +79,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-(Images/docker_ps_output.png)
+![sudo_docker_ps_output](https://user-images.githubusercontent.com/69644053/124220448-bc1d4200-dab2-11eb-9f20-0121e1ce3d11.PNG)
 
 The playbook is duplicated below.
 ```yaml
