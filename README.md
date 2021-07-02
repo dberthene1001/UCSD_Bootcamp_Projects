@@ -4,6 +4,7 @@
 
 The files in this repository were used to configure live ELK Stack on Azure.
 
+![Cloud Security Diagram_DVB](https://user-images.githubusercontent.com/69644053/124221513-c6d8d680-dab4-11eb-9296-6ba3074df990.PNG)
 
 This document contains the following details:
 - Description of the Topologu
