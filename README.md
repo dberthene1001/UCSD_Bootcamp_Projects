@@ -1,4 +1,4 @@
-# UCSD_Bootcamp_Projects
+# Azure ELK Stack Deployment Projects
   GNU nano 4.9.3                                     Automated_ELK_Stack_Deployment.md
 ## Automated ELK Stack Deployment
 
@@ -20,9 +20,9 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting inbound access to the network.
 The load balancer ensures that work to process incoming traffic will be shared by both vulnerable web servers. Access controls will
-ensure that only authorized users - namely, ourselves - will be able to connect in the first place._
+ensure that only authorized users - namely, ourselves - will be able to connect in the first place.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file systems of the VMs on the networ>CPU usage; attempted SSH logins; sudo ecalation failures; etc.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file systems of the VMs on the network CPU usage, attempted SSH logins, sudo ecalation failures, and etc.
 
 
 The configuration details of each machine may be found below.
@@ -38,8 +38,8 @@ The configuration details of each machine may be found below.
 
 In addition to the above, Azure has provisioned a **load balancer** in front of all Machines except for the jump box.
 
+### ELK Server Configuration
 
-##ELK Server Configuration
 The ELK VM exposes an Elastic Stack instance. **Docker** is used to download and manage an ELK container.
 Rather than configure ELK manually, we opted to develop a reusable Ansible Playbook to accomplish the task. This playbook is duplicated below.
 
@@ -67,7 +67,7 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantagous because>reduces the chance of bugs and error, and its Infrastructure as Code. Using Infrastructure as Code allows you to run your infrastructure script which can be deployed easily in the future.
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantagous because reduces the chance of bugs and error, and its Infrastructure as Code. Using Infrastructure as Code allows you to run your infrastructure script which can be deployed easily in the future.
 
 The playbook implements the following tasks:
 
