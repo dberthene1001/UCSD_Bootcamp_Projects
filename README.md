@@ -20,10 +20,10 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting inbound access to the network.
-The load balancer ensures that work to process incoming traffic will be shared by both vulnerable web servers. Access controls will
+The load balancer ensures that work to process incoming traffic will be shared by all three vulnerable web servers. Access controls will
 ensure that only authorized users - namely, ourselves - will be able to connect in the first place.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file systems of the VMs on the network CPU usage, attempted SSH logins, sudo ecalation failures, and etc.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file systems of the VMs on the network CPU usage, attempted SSH logins, sudo escalation failures, and etc.
 
 
 The configuration details of each machine may be found below.
@@ -37,7 +37,6 @@ The configuration details of each machine may be found below.
 | Web-3      | Web Server  | 10.0.0.10  | Linux            |
 | Elk Server | Monitoring  | 10.1.0.4   | Linux            |
 
-In addition to the above, Azure has provisioned a **load balancer** in front of all Machines except for the jump box.
 
 ### ELK Server Configuration
 
@@ -72,10 +71,14 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 
 The playbook implements the following tasks:
 
--The Playbook first installs docker.io
+-The playbook first installs docker.io
+
 -Next, install python3-pip
+
 -Installs Docker python Module
+
 -Increases Memory for Elk
+
 -Lastly, it downloads and launches the Elk Continer and publishes ports 5601, 9200, and 5044.
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
@@ -149,8 +152,11 @@ We have installed the following Beats on these machines:
 -Packetbeat
 
 These Beats allow us to collect the following information from each machine:
+
 -**Filebeat**: Filebeat detects changes to the filesystem. Specifically, we use it to collect Apache logs.
+
 -**Metricbeat**: Metricbeat detects changes in system metrics, such as CPU usage. We use it to detect SSH login attempts, failed `sudo` escalations, and CPU/RAM statistics.
+
 -**Packetbeat**: Packetbeat collects packets that pass through the NIC, similar to Wireshark. We use it to generate a trace of all activity that takes place on the network, in case later forensic analysis should be warranted.
 
 The playbook below installs Metricbeat on the target hosts. The playbook for installing Filebeat is not included, but looks essentially identical — simply replace `metricbeat` with `filebeat`, and it will work as expected.
@@ -192,7 +198,9 @@ The playbook below installs Metricbeat on the target hosts. The playbook for ins
 In order to use the playbooks, you will need to have an Ansible control node already configured. We use the **jump box** for this purpose.
 
 To use the playbooks, we must perform the following steps:
+
 - Copy the playbooks to the Ansible Control Node
+
 - Run each playbook on the appropriate targets
 
 The easiest way to copy the playbooks is to use Git:
